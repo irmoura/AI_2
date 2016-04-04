@@ -42,7 +42,7 @@ public class GUI_Principal {
         
         Nome = Nome+".txt";
         
-        File dir = new File("C:\\AI\\Nomes");//LER
+        File dir = new File("C:\\AI_2\\Nomes");//LER
         
         File arq = new File(dir,Nome);//LER
             try {
@@ -59,7 +59,7 @@ public class GUI_Principal {
                 //Logger.getLogger(GUI_Teste.class.getName()).log(Level.SEVERE, null, ex);
             }
         
-        java.io.File arquivo = new java.io.File(Diretorio_Nomes,Nome );
+        java.io.File arquivo = new java.io.File(dir,Nome );
         
         if (Nome.equals("")){
         //JOptionPane.showMessageDialog(null,"Eu já lhe conheço "+nome);    
@@ -74,6 +74,7 @@ public class GUI_Principal {
             Logger.getLogger(GUI_Principal.class.getName()).log(Level.SEVERE, null, ex);
     }       
 }       
+
 /*========================================================VERIFICA SE O NOME JÁ FOI DIGITADO ALGUMA VEZ==================================================*/
         
         int vezes = 2;
@@ -97,11 +98,11 @@ public class GUI_Principal {
             }
             
             if(s.length == 1 && !frase.contains("-") && !frase.contains("+")
-            && !frase.contains("*") && !frase.contains("/")){
+            && !frase.contains("*") && !frase.contains("/") && respondida == true){
             uma_frase.Uma_Frase(palavras_separadas[0]);
             }
             else
-            if(s.length == 2 && !frase.contains("-")){
+            if(s.length == 2 && !frase.contains("-") && respondida == true){
             duas_frases.Duas_Frases(palavras_separadas[0], palavras_separadas[1]);
             }
             else
