@@ -16,6 +16,8 @@ public class Uma_Frase {
     
     GUI_Principal p = new GUI_Principal();
     
+    Verifica_Frase vf = new Verifica_Frase();
+    
     Calendar calendario = Calendar.getInstance();
     int hora = calendario.get(Calendar.HOUR);
     int minuto = calendario.get(Calendar.MINUTE);
@@ -23,10 +25,18 @@ public class Uma_Frase {
     String nome = p.nome;
     boolean respondida = p.respondida;
     
-    public void Uma_Frase(String p1){
+    public void Uma_Frase(String p1,String frase){
         if(p1.equals("horas")){
             JOptionPane.showMessageDialog(null,"São "+hora+" e "+minuto+" "+nome);
             p.respondida = true;
+        }
+        else
+        {
+            
+            frase = frase.replace(";"," ");
+            frase = frase+".txt";
+            
+            vf.Verifica_Frase(frase);
         }
     }
     

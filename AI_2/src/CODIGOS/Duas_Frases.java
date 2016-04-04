@@ -15,6 +15,8 @@ import javax.swing.JOptionPane;
 public class Duas_Frases {
     GUI_Principal p = new GUI_Principal();
     
+    Verifica_Frase vf = new Verifica_Frase();
+    
     Calendar calendario = Calendar.getInstance();
     int hora = calendario.get(Calendar.HOUR);
     int minuto = calendario.get(Calendar.MINUTE);
@@ -22,7 +24,7 @@ public class Duas_Frases {
     String nome = p.nome;
     boolean respondida = p.respondida;
     
-    public void Duas_Frases(String p1, String p2){
+    public void Duas_Frases(String p1, String p2,String frase){
         
         if(
           (p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE")
@@ -51,6 +53,14 @@ public class Duas_Frases {
              }
              
             }
+        }////
+        else
+        {
+            
+            frase = frase.replace(";"," ");
+            frase = frase+".txt";
+            
+            vf.Verifica_Frase(frase);
         }
     }
 }

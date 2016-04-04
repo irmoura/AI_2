@@ -98,22 +98,12 @@ public class GUI_Principal {
             }
             
             if(s.length == 1 && !frase.contains("-") && !frase.contains("+")
-            && !frase.contains("*") && !frase.contains("/") && respondida == true){
-            uma_frase.Uma_Frase(palavras_separadas[0]);
+            && !frase.contains("*") && !frase.contains("/")){
+            uma_frase.Uma_Frase(palavras_separadas[0],frase);
             }
             else
-            if(s.length == 2 && !frase.contains("-") && respondida == true){
-            duas_frases.Duas_Frases(palavras_separadas[0], palavras_separadas[1]);
-            }
-            else
-            if(!respondida == true)
-            {
-                frase = frase.replace(";"," ");
-                
-                frase = frase+".txt";
-        
-                vf.Verifica_Frase(frase);
-                
+            if(s.length == 2 && !frase.contains("-")){
+            duas_frases.Duas_Frases(palavras_separadas[0], palavras_separadas[1],frase);
             }
             
             ////////////////////////
