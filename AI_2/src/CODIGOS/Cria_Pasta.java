@@ -15,13 +15,16 @@ import java.util.logging.Logger;
  */
 public class Cria_Pasta {
     
-    public static void Pasta_Principal(String Pasta_Principal, String Perguntas) {
+    public static void Pasta_Principal(String Pasta_Principal, String Perguntas, String Nomes) {
         
         java.io.File DIRETORIO_PRINCIPAL = new java.io.File("C:\\"+Pasta_Principal);
         DIRETORIO_PRINCIPAL.mkdir();
         
         java.io.File PASTA_PERGUNTAS = new java.io.File("C:\\"+Pasta_Principal+"\\"+Perguntas);
         PASTA_PERGUNTAS.mkdir();
+        
+        java.io.File PASTA_NOMES = new java.io.File("C:\\"+Pasta_Principal+"\\"+Nomes);
+        PASTA_NOMES.mkdir();
         
     }
     
