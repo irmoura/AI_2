@@ -16,18 +16,6 @@ public class Calculos_Diretos {
     static String operador_procurado, Depois, Antes;
     static int antes_do_operador, depois_do_operador, depois, antes;
     
-    /*public static void main(String args[]){
-        
-        for(int i = 0; i < 4;i++){
-        
-        String calculo = JOptionPane.showInputDialog(null,"");//"200+1990";
-        
-        Calculo(calculo);
-        
-        }
-        
-    }*/
-    
     public static void Calculo(){
         
         String calculo = JOptionPane.showInputDialog(null,"Digite o calculo que deseja fazer: ");

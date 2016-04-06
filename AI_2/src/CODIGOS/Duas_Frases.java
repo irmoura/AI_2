@@ -58,7 +58,7 @@ public class Duas_Frases {
         {
             
             frase = frase.replace(";"," ");
-            frase = frase+".txt";
+            frase += ".txt";
             
             vf.Verifica_Frase(frase);
         }

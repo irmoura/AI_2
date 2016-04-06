@@ -29,6 +29,9 @@ public class GUI_Principal {
         Uma_Frase uma_frase = new Uma_Frase();
         Duas_Frases duas_frases = new Duas_Frases();
         Calculos_Diretos cd = new Calculos_Diretos();
+        Quantidade_Perguntas_Conhecidas qpc = new Quantidade_Perguntas_Conhecidas();
+        Palavras_Chave pc = new Palavras_Chave();
+        Despertador d = new Despertador();
         
         cp.Pasta_Principal("AI_2","Perguntas","Nomes");//NOME DAS PASTAS PRINCIPAIS DO PROGRAMA
         
@@ -78,19 +81,29 @@ public class GUI_Principal {
 
 /*========================================================VERIFICA SE O NOME JÁ FOI DIGITADO ALGUMA VEZ==================================================*/
         
-        int vezes = 2;
+        int vezes = 50;
       
         for(int i = 0; i < vezes; i++){
             
             Random numero_aleatorio = new Random();
             na = numero_aleatorio.nextInt(4);//NUMEROS ALEATORIOS ENTRE 0 E 3
             
-            frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª pergunta: ");
+            frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª frase: ","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
             
-            if((frase.equals("calc")))
-        {//SE A PALAVRA FOR CALCULO
+            if((frase.equals(pc.Calculo_Direto)))
+        {//SE QUISER FAZER UM CALCULO DIRETO
             cd.Calculo();
-        }//SE A PALAVRA FOR CALCULO
+        }//SE QUISER FAZER UM CALCULO DIRETO
+            else
+            if((frase.equals(pc.Quantidade)))
+        {//SE QUISER SABER A QUANTIDADE DE FRASES CONHECIDAS
+            qpc.Quantidade();
+        }//SE QUISER SABER A QUANTIDADE DE FRASES CONHECIDAS
+            else
+            if((frase.equals(pc.Despertador)))
+        {//SE QUISER SABER DEFINIR O DESPERTADOR
+            d.Despertador();
+        }//SE QUISER SABER DEFINIR O DESPERTADOR
             
             ////////////////////////
             
@@ -109,7 +122,9 @@ public class GUI_Principal {
              !(frase.contains("+")) && 
              !(frase.contains("*")) && 
              !(frase.contains("/")) &&
-             !(frase.equals("calc"))
+             !(frase.equals(pc.Calculo_Direto)) &&
+             !(frase.equals(pc.Despertador)) &&
+             !(frase.equals(pc.Quantidade))
                )
             {
             uma_frase.Uma_Frase(palavras_separadas[0],frase);
@@ -121,10 +136,23 @@ public class GUI_Principal {
              !(frase.contains("+")) && 
              !(frase.contains("*")) && 
              !(frase.contains("/")) &&
-             !(frase.equals("calc"))
+             !(frase.equals(pc.Calculo_Direto)) &&
+             !(frase.equals(pc.Despertador)) &&
+             !(frase.equals(pc.Quantidade))
                )
             {
             duas_frases.Duas_Frases(palavras_separadas[0], palavras_separadas[1],frase);
+            }
+            else
+            if(
+               !(frase.equals(pc.Calculo_Direto)) &&
+               !(frase.equals(pc.Despertador)) &&
+               !(frase.equals(pc.Quantidade))     
+               )
+            {
+             frase = frase.replace(";"," ");
+             frase += ".txt";
+             vf.Verifica_Frase(frase);   
             }
             
             ////////////////////////

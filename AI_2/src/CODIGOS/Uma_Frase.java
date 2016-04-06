@@ -34,7 +34,7 @@ public class Uma_Frase {
         {
             
             frase = frase.replace(";"," ");
-            frase = frase+".txt";
+            frase += ".txt";
             
             vf.Verifica_Frase(frase);
         }

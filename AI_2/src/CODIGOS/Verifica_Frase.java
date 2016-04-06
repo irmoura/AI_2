@@ -38,7 +38,7 @@ public class Verifica_Frase {
             
             String Resposta = bufferedReader.readLine();//DIA
             
-            JOptionPane.showMessageDialog(null,Resposta+" "+p.nome);
+            JOptionPane.showMessageDialog(null,Resposta+" "+p.nome,"Artificial Inteligence",JOptionPane.INFORMATION_MESSAGE);
              
         } catch (FileNotFoundException ex) {//INICIO ARQUIVO NAO ENCONTRADO
             
@@ -63,7 +63,7 @@ public class Verifica_Frase {
             Logger.getLogger(Verifica_Frase.class.getName()).log(Level.SEVERE, null, ex);
         }
             
-        String resposta = JOptionPane.showInputDialog(null,"Digite uma resposta para essa pergunta: ");
+        String resposta = JOptionPane.showInputDialog(null,"Digite uma resposta para essa pergunta: ","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
         
         PrintWriter gravarArq = new PrintWriter(Obs); 
         {
