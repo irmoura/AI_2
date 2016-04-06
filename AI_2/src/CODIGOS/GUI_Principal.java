@@ -28,6 +28,7 @@ public class GUI_Principal {
         Verifica_Frase vf = new Verifica_Frase();
         Uma_Frase uma_frase = new Uma_Frase();
         Duas_Frases duas_frases = new Duas_Frases();
+        Calculos_Diretos cd = new Calculos_Diretos();
         
         cp.Pasta_Principal("AI_2","Perguntas","Nomes");//NOME DAS PASTAS PRINCIPAIS DO PROGRAMA
         
@@ -86,6 +87,11 @@ public class GUI_Principal {
             
             frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª pergunta: ");
             
+            if((frase.equals("calc")))
+        {//SE A PALAVRA FOR CALCULO
+            cd.Calculo();
+        }//SE A PALAVRA FOR CALCULO
+            
             ////////////////////////
             
             frase = frase.replace(" ",";");
@@ -97,12 +103,27 @@ public class GUI_Principal {
             palavras_separadas[j] = s[j];
             }
             
-            if(s.length == 1 && !frase.contains("-") && !frase.contains("+")
-            && !frase.contains("*") && !frase.contains("/")){
+            if(
+              (s.length == 1) && 
+             !(frase.contains("-")) && 
+             !(frase.contains("+")) && 
+             !(frase.contains("*")) && 
+             !(frase.contains("/")) &&
+             !(frase.equals("calc"))
+               )
+            {
             uma_frase.Uma_Frase(palavras_separadas[0],frase);
             }
             else
-            if(s.length == 2 && !frase.contains("-")){
+            if(
+              (s.length == 2) && 
+             !(frase.contains("-")) &&
+             !(frase.contains("+")) && 
+             !(frase.contains("*")) && 
+             !(frase.contains("/")) &&
+             !(frase.equals("calc"))
+               )
+            {
             duas_frases.Duas_Frases(palavras_separadas[0], palavras_separadas[1],frase);
             }
             
