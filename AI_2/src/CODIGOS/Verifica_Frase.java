@@ -25,6 +25,10 @@ public class Verifica_Frase {
     public static void Verifica_Frase(String frase){
         
         GUI_Principal p = new GUI_Principal();
+        Cumprimentos c = new Cumprimentos();
+        Questionamentos c = new Questionamentos();
+        
+        c.Cumprimentos(frase);//VERIFICA SE A FRASE TEM UM CUMPRIMENTO
         
         File dir = new File("C:\\AI_2\\Perguntas");
         
