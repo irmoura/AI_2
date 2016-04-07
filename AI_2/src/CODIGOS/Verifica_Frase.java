@@ -26,9 +26,10 @@ public class Verifica_Frase {
         
         GUI_Principal p = new GUI_Principal();
         Cumprimentos c = new Cumprimentos();
-        Questionamentos c = new Questionamentos();
+        Questionamentos q = new Questionamentos();
         
         c.Cumprimentos(frase);//VERIFICA SE A FRASE TEM UM CUMPRIMENTO
+        q.Questionamentos(frase);//VERIFICA SE A FRASE TEM UM QUESTIONAMENTO
         
         File dir = new File("C:\\AI_2\\Perguntas");
         
