@@ -17,8 +17,6 @@ public class Cumprimentos {
         
         public void Cumprimentos(String frase){
             
-            frase = frase.replace(".txt","");
-            
             List<String> cumprimentos = new ArrayList<String>(){
             {
              add("ola");

@@ -17,8 +17,6 @@ public class Questionamentos {
     
     public void Questionamentos(String frase){
             
-            frase = frase.replace(".txt","");
-            
             List<String> questionamentos = new ArrayList<String>(){
             {
              add("que");

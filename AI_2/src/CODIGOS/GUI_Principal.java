@@ -32,6 +32,8 @@ public class GUI_Principal {
         Quantidade_Perguntas_Conhecidas qpc = new Quantidade_Perguntas_Conhecidas();
         Palavras_Chave pc = new Palavras_Chave();
         Despertador d = new Despertador();
+        Cumprimentos c = new Cumprimentos();
+        Questionamentos q = new Questionamentos();
         
         cp.Pasta_Principal("AI_2","Perguntas","Nomes");//NOME DAS PASTAS PRINCIPAIS DO PROGRAMA
         
@@ -115,6 +117,9 @@ public class GUI_Principal {
             for(int j = 0; j < s.length; j++){
             palavras_separadas[j] = s[j];
             }
+            
+            c.Cumprimentos(palavras_separadas[0]);//VERIFICA SE A FRASE TEM UM CUMPRIMENTO
+            q.Questionamentos(palavras_separadas[0]);//VERIFICA SE A FRASE TEM UM QUESTIONAMENTO
             
             if(
               (s.length == 1) && 
