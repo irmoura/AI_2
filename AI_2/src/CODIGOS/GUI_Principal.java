@@ -118,8 +118,8 @@ public class GUI_Principal {
             palavras_separadas[j] = s[j];
             }
             
-            c.Cumprimentos(palavras_separadas[0]);//VERIFICA SE A FRASE TEM UM CUMPRIMENTO
-            q.Questionamentos(palavras_separadas[0]);//VERIFICA SE A FRASE TEM UM QUESTIONAMENTO
+            c.Cumprimentos(palavras_separadas[0]);//VERIFICA SE A PRIMEIRA PALAVRA TEM UM CUMPRIMENTO
+            q.Questionamentos(palavras_separadas[0]);//VERIFICA SE A PRIMEIRA PALAVRA TEM UM QUESTIONAMENTO
             
             if(
               (s.length == 1) && 
